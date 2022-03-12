@@ -8,7 +8,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wisata Bandung'),
+        title: const Text('Wisata Bersama'),
       ),
       body: ListView.builder(
           itemBuilder: (context, index) {
@@ -34,7 +34,12 @@ class MainScreen extends StatelessWidget {
         children: <Widget> [
           Expanded(
             flex: 1,
-            child: Image.asset(place.imageAsset),
+            child:
+            Image(
+              image: AssetImage(place.imageAsset),
+              fit: BoxFit.cover,
+              height: 80,
+            ),
           ),
           Expanded(
             flex: 2,
