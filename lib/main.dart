@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum2/detail_screen.dart';
-import 'package:praktikum2/main_screen.dart';
+import 'package:praktikum2/model/tourism_place.dart';
 
 void main() {
   runApp(MyApp());
