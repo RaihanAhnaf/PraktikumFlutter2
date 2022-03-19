@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:praktikum2/done_tourism_list.dart';
 import 'package:praktikum2/tourism_list.dart';
@@ -33,7 +32,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen>{
-  final List<TourismPlace> doneTourismPlaceList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -45,18 +43,16 @@ class _MainScreenState extends State<MainScreen>{
               icon: const Icon(Icons.done_outline),
               onPressed: (){
                 Navigator.push(
-                    context,
+                  context,
                   MaterialPageRoute(builder: (context){
-                    return DoneTourismList(
-                        doneTourismPlaceList: doneTourismPlaceList
-                    );
+                    return const DoneTourismList();
                   }),
                 );
               },
           ),
         ],
       ),
-      body: TourismList(doneTourismPlaceList: doneTourismPlaceList),
+      body: TourismList(),
     );
   }
 }
